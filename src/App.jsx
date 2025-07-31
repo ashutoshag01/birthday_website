@@ -25,7 +25,7 @@ const memoryMessages = [
   "Dadu is best so was the card you made"
 ];
 
-const placeholderImages = Array.from({ length: 21 }, (_, i) => `/images/Photo${i}.jpg`);
+const placeholderImages = Array.from({ length: 21 }, (_, i) => );
 
 const stars = Array.from({ length: 21 }, (_, i) => ({
   id: i,
@@ -33,7 +33,7 @@ const stars = Array.from({ length: 21 }, (_, i) => ({
   y: Math.random() * 85 + 5,
   memory: `Memory ${i + 1}`,
   description: memoryMessages[i],
-  image: placeholderImages[i],
+  image: `/images/Photo${i+1}.jpg`,
 }));
 
 export default function InteractiveUniverse() {
