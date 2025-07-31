@@ -24,7 +24,7 @@ const memoryMessages = [
   "The comfort of your hugs",
 ];
 
-const placeholderImages = Array.from({ length: 21 }, (_, i) => `/images/Photo${i}.${i < 10 ? 'jpg' : 'png'}`);
+const placeholderImages = Array.from({ length: 21 }, (_, i) => `/images/Photo${i}.jpg`);
 
 const stars = Array.from({ length: 21 }, (_, i) => ({
   id: i,
