@@ -22,42 +22,11 @@ const memoryMessages = [
   "Celebrating our anniversary with pizza",
   "Holding hands while walking at night",
   "The comfort of your hugs",
-  "The way you look at me like I'm your world",
-  "Binge-watching shows we both love",
-  "Helping each other through tough times",
-  "The first time I saw you cry",
-  "Laughing at our inside jokes",
-  "Random acts of kindness",
-  "When you brought me flowers for no reason",
-  "Watching the sunset together",
-  "Listening to your favorite songs",
-  "You calming me down when I was anxious",
-  "That time we got lost and discovered a new place",
-  "When you helped me chase my dreams",
-  "Writing our bucket list together",
-  "Telling ghost stories under a blanket",
-  "Making snow angels together",
-  "Taking care of me when I was sick",
-  "Planning our future home",
-  "That cozy winter night by the fire",
-  "When we stargazed for hours",
-  "Hiking up to that amazing view",
-  "Taking silly selfies",
-  "The time we built a blanket fort",
-  "When we got caught in a thunderstorm",
-  "Falling asleep on your shoulder",
-  "When I realized you were my home",
-  "Our first New Year's kiss",
-  "Painting together for fun",
-  "Making up our own traditions",
-  "That morning we watched the sunrise together",
-  "Decorating the Christmas tree",
-  "When you held my hand for the first time"
 ];
 
-const placeholderImages = Array.from({ length: 50 }, (_, i) => `https://picsum.photos/seed/memory${i}/300/200`);
+const placeholderImages = Array.from({ length: 21 }, (_, i) => `/images/Photo${i}.${i < 10 ? 'jpg' : 'png'}`);
 
-const stars = Array.from({ length: 50 }, (_, i) => ({
+const stars = Array.from({ length: 21 }, (_, i) => ({
   id: i,
   x: Math.random() * 90 + 5,
   y: Math.random() * 85 + 5,
