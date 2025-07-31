@@ -25,8 +25,6 @@ const memoryMessages = [
   "Dadu is best so was the card you made"
 ];
 
-const placeholderImages = Array.from({ length: 21 }, (_, i) => );
-
 const stars = Array.from({ length: 21 }, (_, i) => ({
   id: i,
   x: Math.random() * 90 + 5,
