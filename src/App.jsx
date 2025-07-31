@@ -90,7 +90,7 @@ export default function InteractiveUniverse() {
         <div className="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center text-white z-30">
           <div className="w-32 h-32 rounded-full bg-white mb-6 overflow-hidden">
             <img
-              src="/images/Profile.jpg"
+              src="https://github.com/ashutoshag01/birthday_website/blob/main/images/Profile.jpg"
               alt="Profile"
               className="w-full h-full object-cover"
             />
