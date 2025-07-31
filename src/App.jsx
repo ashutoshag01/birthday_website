@@ -64,7 +64,7 @@ export default function InteractiveUniverse() {
               className="w-full h-full object-cover"
             />
           </div>
-          <h2 className="text-3xl font-bold mb-4">Happy Birthday, My Love</h2>
+          <h2 className="text-3xl font-bold mb-4">Happy Birthday, Meri Jaan</h2>
           <p className="text-center max-w-md mb-6 px-4">
             I've created a little universe filled with memories and moments just for you. Click below to explore the stars.
           </p>
@@ -80,7 +80,7 @@ export default function InteractiveUniverse() {
       {started && (
         <>
           <h1 className="absolute top-4 left-1/2 transform -translate-x-1/2 text-white text-3xl font-bold z-10">
-            Her Universe
+            Sonal's Universe
           </h1>
           <div className="absolute inset-0">
             {stars.map((star) => (
