@@ -50,16 +50,20 @@ const memoryMessages = [
   "Our first New Year's kiss",
   "Painting together for fun",
   "Making up our own traditions",
-  "That morning we watched the sunrise together"
+  "That morning we watched the sunrise together",
+  "Decorating the Christmas tree",
+  "When you held my hand for the first time"
 ];
+
+const placeholderImages = Array.from({ length: 50 }, (_, i) => `https://picsum.photos/seed/memory${i}/300/200`);
 
 const stars = Array.from({ length: 50 }, (_, i) => ({
   id: i,
-  x: 50 + 40 * Math.cos((i / 50) * 2 * Math.PI),
-  y: 50 + 30 * Math.sin((i / 50) * 2 * Math.PI),
+  x: Math.random() * 90 + 5,
+  y: Math.random() * 85 + 5,
   memory: `Memory ${i + 1}`,
   description: memoryMessages[i % memoryMessages.length],
-  image: null,
+  image: placeholderImages[i],
 }));
 
 export default function InteractiveUniverse() {
@@ -113,7 +117,7 @@ export default function InteractiveUniverse() {
             {stars.map((star) => (
               <motion.div
                 key={star.id}
-                className="absolute w-1.5 h-1.5 rounded-full bg-white cursor-pointer"
+                className="absolute w-3 h-3 rounded-full bg-white cursor-pointer"
                 style={{ left: `${star.x}%`, top: `${star.y}%` }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
