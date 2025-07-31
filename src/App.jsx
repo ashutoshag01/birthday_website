@@ -80,7 +80,7 @@ export default function InteractiveUniverse() {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1500&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className="relative w-full h-screen overflow-hidden" style={{ backgroundImage: 'url(https://images.pexels.com/photos/907485/pexels-photo-907485.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <audio autoPlay loop>
         <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
