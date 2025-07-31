@@ -146,20 +146,6 @@ export default function InteractiveUniverse() {
                     className="w-full h-40 object-cover rounded mb-2"
                   />
                 )}
-
-                <input
-                  type="text"
-                  placeholder="Paste image URL here"
-                  value={imageInput}
-                  onChange={(e) => setImageInput(e.target.value)}
-                  className="w-full p-2 border rounded mb-2"
-                />
-                <button
-                  className="w-full px-4 py-2 mb-2 bg-blue-500 text-white rounded"
-                  onClick={handleImageSave}
-                >
-                  Save Image
-                </button>
                 <button
                   className="w-full px-4 py-2 bg-black text-white rounded"
                   onClick={() => setSelectedStar(null)}
