@@ -32,7 +32,7 @@ const stars = Array.from({ length: 21 }, (_, i) => ({
   x: Math.random() * 90 + 5,
   y: Math.random() * 85 + 5,
   memory: `Memory ${i + 1}`,
-  description: memoryMessages[i % memoryMessages.length],
+  description: memoryMessages[i],
   image: placeholderImages[i],
 }));
 
