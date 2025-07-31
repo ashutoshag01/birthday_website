@@ -58,12 +58,22 @@ const stars = Array.from({ length: 50 }, (_, i) => ({
   x: 50 + 40 * Math.cos((i / 50) * 2 * Math.PI),
   y: 50 + 30 * Math.sin((i / 50) * 2 * Math.PI),
   memory: `Memory ${i + 1}`,
-  description: memoryMessages[i % memoryMessages.length]
+  description: memoryMessages[i % memoryMessages.length],
+  image: null,
 }));
 
 export default function InteractiveUniverse() {
   const [selectedStar, setSelectedStar] = useState(null);
   const [started, setStarted] = useState(false);
+  const [imageInput, setImageInput] = useState("");
+
+  const handleImageSave = () => {
+    if (selectedStar) {
+      selectedStar.image = imageInput;
+      setSelectedStar({ ...selectedStar });
+      setImageInput("");
+    }
+  };
 
   return (
     <div className="relative w-full h-screen overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1500&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
@@ -76,7 +86,7 @@ export default function InteractiveUniverse() {
         <div className="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center text-white z-30">
           <div className="w-32 h-32 rounded-full bg-white mb-6 overflow-hidden">
             <img
-              src="https://via.placeholder.com/150" // Replace with actual image URL
+              src="https://via.placeholder.com/150"
               alt="Profile"
               className="w-full h-full object-cover"
             />
@@ -123,9 +133,31 @@ export default function InteractiveUniverse() {
                 style={{ transform: "translate(-50%, -50%)" }}
               >
                 <h2 className="text-xl font-bold mb-2">{selectedStar.memory}</h2>
-                <p className="text-sm">{selectedStar.description}</p>
+                <p className="text-sm mb-2">{selectedStar.description}</p>
+
+                {selectedStar.image && (
+                  <img
+                    src={selectedStar.image}
+                    alt="Memory"
+                    className="w-full h-40 object-cover rounded mb-2"
+                  />
+                )}
+
+                <input
+                  type="text"
+                  placeholder="Paste image URL here"
+                  value={imageInput}
+                  onChange={(e) => setImageInput(e.target.value)}
+                  className="w-full p-2 border rounded mb-2"
+                />
                 <button
-                  className="mt-4 px-4 py-1 bg-black text-white rounded-full"
+                  className="w-full px-4 py-2 mb-2 bg-blue-500 text-white rounded"
+                  onClick={handleImageSave}
+                >
+                  Save Image
+                </button>
+                <button
+                  className="w-full px-4 py-2 bg-black text-white rounded"
                   onClick={() => setSelectedStar(null)}
                 >
                   Close
